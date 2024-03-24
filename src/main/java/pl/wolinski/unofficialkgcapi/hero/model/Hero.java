@@ -1,6 +1,7 @@
 package pl.wolinski.unofficialkgcapi.hero.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import io.swagger.annotations.ApiModel;
 import pl.wolinski.unofficialkgcapi.awakening.model.Awakening;
 import pl.wolinski.unofficialkgcapi.heroClass.model.HeroClass;
 import pl.wolinski.unofficialkgcapi.heroSkill.model.HeroSkill;

@@ -1,5 +1,6 @@
 package pl.wolinski.unofficialkgcapi.hero.manager;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pl.wolinski.unofficialkgcapi.hero.model.Hero;
@@ -37,10 +38,6 @@ public class HeroManager {
     public Optional<Hero> findByName(String name) { return heroRepository.findByName(name); }
 
     public Hero save(Hero hero) { return heroRepository.save(hero); }
-
-//    public Iterable<Hero> findByBackupHero(Boolean backupHero) {
-//        return heroRepository.findByBackupHero(backupHero);
-//    }
 
     public Iterable<Hero> filterHeroes(Map<String, Object> filters) {
         CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();

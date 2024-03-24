@@ -1,5 +1,6 @@
 package pl.wolinski.unofficialkgcapi.heroClass.api;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.wolinski.unofficialkgcapi.heroClass.manager.HeroClassManager;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/heroClasses")
+@Api(tags = "Hero Class", description = "Hero Class managing")
 public class HeroClassController {
 
     private HeroClassManager heroClassManager;

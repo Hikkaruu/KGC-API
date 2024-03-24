@@ -1,5 +1,6 @@
 package pl.wolinski.unofficialkgcapi.region.api;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.wolinski.unofficialkgcapi.region.model.Region;
@@ -9,6 +10,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/regions")
+@Api(tags = "Region", description = "Region managing")
 public class RegionController {
 
     private RegionManager regionManager;

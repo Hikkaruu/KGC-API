@@ -1,5 +1,6 @@
 package pl.wolinski.unofficialkgcapi.heroSkill.api;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import pl.wolinski.unofficialkgcapi.heroSkill.manager.HeroSkillManager;
@@ -10,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/heroSkills")
+@Api(tags = "Hero Skill", description = "Hero Skill managing")
 public class HeroSkillController {
 
     private HeroSkillManager heroSkillManager;

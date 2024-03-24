@@ -1,6 +1,10 @@
 package pl.wolinski.unofficialkgcapi.awakening.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.annotations.ApiModelProperty;
 import pl.wolinski.unofficialkgcapi.hero.model.Hero;
 
 import javax.persistence.*;
@@ -18,9 +22,10 @@ public class Awakening {
 
     private String icon;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "hero_id", referencedColumnName = "id")
     @JsonBackReference
+    @ApiModelProperty(hidden = true)
     private Hero hero;
 
     public Awakening() {
